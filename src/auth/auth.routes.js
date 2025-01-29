@@ -22,7 +22,7 @@ router.post(
         check('name' , 'El nombre es obligatorio').not().isEmpty(),
         check('password', 'El contraseña debe ser mayor a 6 carácteres').isLength({min : 6}),
         check('email', 'Esto no es un correo válido').isEmail(),
-        check('email').custom(existentEmail),
+
         check('role').custom(isValidRole),
         check('phone', 'El teléfono debe contener 8 números').isLength({min : 8, max: 8}),
         validateFields

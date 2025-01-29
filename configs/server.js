@@ -18,9 +18,9 @@ const configureMiddlewares = (app) => {
 }
 
 const configureRoots = (app) => {
-    const pathUser = '/adoptionSystem/v1/users'
+    const authPath = '/adoptionSystem/v1/auth'
 
-    app.use(pathUser, authRoutes)
+    app.use(authPath, authRoutes)
 }
 
 const connectDB = async () => {

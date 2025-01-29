@@ -5,7 +5,7 @@ import User from '../users/user.model'
 export const  validateJWT = async (req, res, next) =>{
     const token = req.header('x-token')
 
-    if(!toekn){
+    if(!token){
         return res.status(401).json({
             msg: 'No hay token en la peticion'
         })
