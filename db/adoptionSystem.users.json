@@ -1,0 +1,91 @@
+[{
+  "_id": {
+    "$oid": "6799b3a6bd875ca83fc5b8d9"
+  },
+  "name": "Alejandro",
+  "email": "alejandro@gmail.com",
+  "password": "$2a$10$Lz1n0dQKn5XelGVN1VpHcetEVdgviwYUE07/lMOz8aGhQx2I7fdbC",
+  "phone": "54148052",
+  "role": "ADMIN_ROLE",
+  "state": true,
+  "google": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6799b491f41f423a745ee8bf"
+  },
+  "name": "Alejandro",
+  "email": "alejandroaaa@gmail.com",
+  "password": "$2a$10$zaYEvQhSmLrU5rRvewjcvOsh.q2Jcgi.bOguVwpdaepqhAMfmEh2.",
+  "phone": "54148052",
+  "role": "ADMIN_ROLE",
+  "state": true,
+  "google": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6799b7787e8ebdc25fef752d"
+  },
+  "name": "Alejandro",
+  "email": "alejandroa@aagmail.com",
+  "password": "$2a$10$tXsu3hvaI5GMYRzDZozoK.WNUwC5ZdYaEQehvDffwmt47e.z0SVy.",
+  "phone": "54148052",
+  "role": "ADMIN_ROLE",
+  "state": true,
+  "google": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6799b7b772dcb33449ea59ce"
+  },
+  "name": "Alejandro",
+  "email": "alejandroa@gmail.com",
+  "password": "$2a$10$F2cV0mcP0Doz5uh3sBlKouzRmJSvTWehowfngcdf1aU9Gc.LOaaUC",
+  "phone": "54148052",
+  "role": "ADMIN_ROLE",
+  "state": true,
+  "google": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6799b90c72e1e0889af69243"
+  },
+  "name": "Alejandro",
+  "email": "alejandr@gmail.com",
+  "password": "$2a$10$iVD99dc8sWEiNCZEdJCxEeEBA2OWST4rGAOVWOwZWZJ.bhxcGyLOq",
+  "phone": "54148052",
+  "role": "ADMIN_ROLE",
+  "state": true,
+  "google": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6799ba15cdc5071c463eb0bd"
+  },
+  "name": "Alejandro",
+  "email": "alejanr@gmail.com",
+  "password": "$2a$10$5fSUHzx8Cus/kqUc/f6LVOwSWlUNGurh/wJFF4ZqMircrNF4mq.7q",
+  "phone": "54148052",
+  "role": "ADMIN_ROLE",
+  "state": true,
+  "google": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6799baa8cdc5071c463eb0c0"
+  },
+  "name": "Alejandro",
+  "email": "alejnr@gmail.com",
+  "password": "$2a$10$miadI0dY9fXMO9ZhZuKsCOVXylF28LJ1V60zP2Bk4E.33tfSq97ZO",
+  "phone": "54148052",
+  "role": "ADMIN_ROLE",
+  "state": true,
+  "google": false,
+  "__v": 0
+}]
