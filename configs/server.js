@@ -8,8 +8,8 @@ import { dbConnection } from './mongo.js'
 import limiter from '../src/middlewares/validate-cant-requests.js';
 import authRoutes from '../src/auth/auth.routes.js'
 
-const configureMiddlewares = (app) => {
-    app.use(express.urlencoded({extended:false}))
+const middlewares = (app) => {
+    app.use(express.urlencoded({ extended:false }))
     app.use(cors())
     app.use(express.json())
     app.use(helmet())
@@ -17,10 +17,8 @@ const configureMiddlewares = (app) => {
     app.use(limiter)
 }
 
-const configureRoots = (app) => {
-    const authPath = '/adoptionSystem/v1/auth'
-
-    app.use(authPath, authRoutes)
+const routes = (app) => {
+    app.use('/adoptionSystem/v1/auth', authRoutes)
 }
 
 const connectDB = async () => {
@@ -28,7 +26,7 @@ const connectDB = async () => {
         await dbConnection()
         console.log('Database connected succesfully')
     } catch (error) {
-        console.log('Error trying to connect to the database')
+        console.log('Error trying to connect to the database', error)
         process.exit(1)
     }
 }
@@ -37,12 +35,13 @@ export const startServer = async () => {
     const app = express()
     const port = process.env.PORT || 3000
 
-    await connectDB()
-
-    configureMiddlewares(app)
-    configureRoots(app)
-
-    app.listen(port, () =>{
-        console.log(`Server running on port ${port}`)
-    })
+    try {
+        middlewares(app)
+        connectDB()
+        routes(app)
+        app.listen(port)
+        console.log(`Server running on port: ${port}`)
+    } catch (e) {
+        console.log(e)
+    }
 }
