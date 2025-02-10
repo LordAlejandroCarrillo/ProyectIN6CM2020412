@@ -10,10 +10,18 @@ export const isValidRole = async (role = '') => {
 }
 
 export const existentEmail = async (email = ' ') => {
-
+    
     const existEmail = await User.findOne({email})
     
     if(existEmail){
         throw new Error(`El correo ${ email } ya existe en la base de datos`)
+    }
+}
+
+export const userExistsById = async(id = "") => {
+    const userExists = await User.findById(id)
+
+    if(!userExists){
+        throw new Error(`The ID ${id} doesn't exist`)
     }
 }
