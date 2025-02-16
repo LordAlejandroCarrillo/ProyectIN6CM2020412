@@ -29,23 +29,23 @@ export const getUsers = async  (req = request, res = response) => {
     }
 }
 
-export const getUserById = async (req,res) => {
+export const getUserById = async (req = request, res = response) => {
     try {
         const {id} = req.params
-
-        console.log('hola')
+        console.log(req.params)
         const user = await User.findById(id)
         if(!user){
             return res.status(404).json({
                 succes: false,
-                msg: "Uusuario no found"
+                msg: "User not found"
             })
         }
         res.status(200).json({
-            success:true,
-            user
+            user,
+            id
         })
     } catch (error) {
+        console.log(req.params)
         res.status(500).json({
             success: false,
             msg:"Error obtainning user",
@@ -64,8 +64,7 @@ export const updateUser = async (req, res = response)=>{
             data.password = await hash(password)
         }
 
-        const user = await User.findByIdAndUpdate(id, data, {new:true})
-
+        const user = await User.findByIdAndUpdate(id, (data), {new:true})
         res.status(200).json({
             success: true,
             msg: "User updated",

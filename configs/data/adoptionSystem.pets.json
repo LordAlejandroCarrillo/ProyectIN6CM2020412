@@ -1,0 +1,39 @@
+[{
+  "_id": {
+    "$oid": "67a980c120b6b3ffe94ec5aa"
+  },
+  "name": "Kitty",
+  "description": "Siames",
+  "age": 3,
+  "type": "GATO",
+  "keeper": {
+    "$oid": "67a96b5ab952339341624014"
+  },
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67a980da20b6b3ffe94ec5ae"
+  },
+  "name": "Kaisha",
+  "description": "Perro mixto",
+  "age": 5,
+  "type": "PERRO",
+  "keeper": {
+    "$oid": "67a96b5ab952339341624014"
+  },
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67b14651b68cd343a6955330"
+  },
+  "name": "Ben",
+  "description": "Callejero",
+  "age": 10,
+  "type": "PERRO",
+  "keeper": {
+    "$oid": "67a96b5ab952339341624014"
+  },
+  "status": true
+}]

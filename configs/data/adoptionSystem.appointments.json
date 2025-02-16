@@ -23,4 +23,17 @@
     "$oid": "67a96b5ab952339341624014"
   },
   "status": true
+},
+{
+  "_id": {
+    "$oid": "67b14651b68cd343a6955330"
+  },
+  "name": "Ben",
+  "description": "Callejero",
+  "age": 10,
+  "type": "PERRO",
+  "keeper": {
+    "$oid": "67a96b5ab952339341624014"
+  },
+  "status": true
 }]
