@@ -1,39 +1,44 @@
 [{
   "_id": {
+    "$oid": "67ab5e108ad233a4f3046e05"
+  },
+  "date": "2025-02-20T15:30:00.000+00:00",
+  "description": "Mi perro tiene cataratas",
+  "lifespan": "2h",
+  "email": "alejandro@gmail.com",
+  "petRef": {
     "$oid": "67a980c120b6b3ffe94ec5aa"
   },
-  "name": "Kitty",
-  "description": "Siames",
-  "age": 3,
-  "type": "GATO",
-  "keeper": {
+  "userRef": {
     "$oid": "67a96b5ab952339341624014"
   },
-  "status": true
+  "state": true,
+  "createdAt": {
+    "$date": "2025-02-11T14:26:24.472Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-16T02:01:07.138Z"
+  }
 },
 {
   "_id": {
+    "$oid": "67b14624b68cd343a695532c"
+  },
+  "date": "2025-02-20T14:50:00.000+00:00",
+  "description": "Mi gato se trago pelos.",
+  "lifespan": "2h",
+  "email": "alejandro@gmail.com",
+  "petRef": {
     "$oid": "67a980da20b6b3ffe94ec5ae"
   },
-  "name": "Kaisha",
-  "description": "Perro mixto",
-  "age": 5,
-  "type": "PERRO",
-  "keeper": {
+  "userRef": {
     "$oid": "67a96b5ab952339341624014"
   },
-  "status": true
-},
-{
-  "_id": {
-    "$oid": "67b14651b68cd343a6955330"
+  "state": true,
+  "createdAt": {
+    "$date": "2025-02-16T01:57:56.032Z"
   },
-  "name": "Ben",
-  "description": "Callejero",
-  "age": 10,
-  "type": "PERRO",
-  "keeper": {
-    "$oid": "67a96b5ab952339341624014"
-  },
-  "status": true
+  "updatedAt": {
+    "$date": "2025-02-16T01:57:56.032Z"
+  }
 }]
