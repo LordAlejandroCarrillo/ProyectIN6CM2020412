@@ -1,11 +1,11 @@
 import { Router } from "express"
 import { check } from "express-validator"
-import { getUsers, getUserById, updateUser, deletUser } from "./user.controller.js"
+import { getUsers, getUserById, updateUser, deletUser, updateJustPassword } from "./user.controller.js"
 import { userExistsById } from "../helpers/db-validator.js"
 import {validateFields} from "../middlewares/validate-fields.js"
 import { uploadProfilePicture } from "../middlewares/multer-upload.js"
-import { hasRole } from "../middlewares/validate-roles.js"
-import { validateJWT } from "../middlewares/validate-jwt.js"
+import { deleteFileOnError } from "../middlewares/delete-file-on-error.js"
+
 const router = Router()
 
 router.get("/", getUsers)
@@ -29,6 +29,18 @@ router.put(
         validateFields,
     ],
     updateUser
+)
+
+router.put(
+    "/update-password/:id",
+    uploadProfilePicture.single('profilePicture'),
+    [
+        check("id", "Is not a valid ID").isMongoId(),
+        check("id").custom(userExistsById),
+        validateFields,
+        deleteFileOnError
+    ],
+    updateJustPassword
 )
 
 router.delete(

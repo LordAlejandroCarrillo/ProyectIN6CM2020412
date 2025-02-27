@@ -80,6 +80,32 @@ export const updateUser = async (req, res = response)=>{
     }
 }
 
+export const updateJustPassword = async (req, res = response)=>{
+    try {
+        
+        const {id} = req.params
+        const { ...data } = req.body
+        console.log(data)
+        let newPassword = ''
+        if(data.password){
+            newPassword = await hash(data.password)
+        }
+        const user = await User.findByIdAndUpdate(id, {password:newPassword}, {new:true})
+        res.status(200).json({
+            success: true,
+            msg: "Password updated",
+            user
+        })
+
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            msg: 'Error updating password',
+            error
+        })
+    }
+}
+
 export const deletUser = async (req, res) => {
     try {
         const { id } = req.params
